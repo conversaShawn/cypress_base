@@ -651,30 +651,30 @@ describe('TodoMVC - React', function () {
       })
     })
 
-    // it('has good contrast with several todos', () => {
-    //   cy.addAxeCode()
-    //   cy.get('.new-todo')
-    //   .type('learn testing{enter}')
-    //   .type('be cool{enter}')
+    it('has good contrast with several todos', () => {
+      cy.addAxeCode()
+      cy.get('.new-todo')
+      .type('learn testing{enter}')
+      .type('be cool{enter}')
 
-    //   cy.get('.todo-list li').should('have.length', 2)
-    //   cy.checkA11y(null, {
-    //     runOnly: ['cat.color'],
-    //   })
+      cy.get('.todo-list li').should('have.length', 2)
+      cy.checkA11y(null, {
+        runOnly: ['cat.color'],
+      })
 
-    //   // and after marking an item completed
-    //   cy.get('.todo-list li')
-    //   .first()
-    //   .find('.toggle')
-    //   .check()
+      // and after marking an item completed
+      cy.get('.todo-list li')
+      .first()
+      .find('.toggle')
+      .check()
 
-    //   cy.get('.todo-list li')
-    //   .first()
-    //   .should('have.class', 'completed')
+      cy.get('.todo-list li')
+      .first()
+      .should('have.class', 'completed')
 
-    //   cy.checkA11y(null, {
-    //     runOnly: ['cat.color'],
-    //   })
-    // })
+      cy.checkA11y(null, {
+        runOnly: ['cat.color'],
+      })
+    })
   })
 })
